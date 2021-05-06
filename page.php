@@ -105,7 +105,7 @@ get_header(); ?>
 		</div>
 		<!-- /post title -->
 		<?php if ( get_field('content_width') == 'boxed' ): ?>
-		<div class="inner boxed">
+		<div class="inner">
 			<?php 
 			if ( have_posts() ) {
 				while ( have_posts() ) {
