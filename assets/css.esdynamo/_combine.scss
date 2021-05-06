@@ -1,0 +1,46 @@
+@import "_flexboxgrid.min.scss";
+@import "_flex.scss";
+@import "_feature-block.scss";
+@import "_cta.scss";
+@import "_buttons.scss";
+@import "_content-block.scss";
+
+// TYPOGRAPHY
+.light, .light h1, .light h2, .light h3, .light h4, .light h5, .light h6, .light ul {
+	color: #fff;
+}
+.two-third-one-third h3 {
+	margin-top: 0;
+}
+
+// IMAGE GRID
+.image-grid-container ul {
+	list-style: none;
+	filter: grayscale(1);
+	padding: 0;
+}
+.post-content-container .image-grid-container ul li::before {
+	display: none;
+}
+.post-content-container .image-grid-container ul li {
+	display: flex;
+	justify-content: center;
+	flex-direction: column;
+    align-items: center;
+}
+.post-content-container .image-grid-container ul.logo-size li img {
+	max-width: 200px;
+}
+.photo-caption {
+	font-size: 14px;
+	margin-top: 10px;
+}
+
+// MAX WIDTH
+.max-width-800 {
+	max-width: 800px;
+}
+
+img {
+	height: auto;
+}

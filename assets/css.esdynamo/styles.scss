@@ -1,0 +1,157 @@
+@import "_normalize.scss";
+@import "_fontawesome-all.min.scss";
+@import "_isotope.scss";
+@import "_noscript.scss";
+@import "_slick-theme.scss";
+@import "_team.scss";
+@import "_main.scss";
+// VIDEO STYLES
+@import "_video.scss";
+// SOCIAL STYLES
+@import "_social.scss";
+// CONTENT BLOCK STYLES
+@import "_content-block.scss";
+
+/* FIVE COLUMN GRID */
+.col-lg-1_5, .col-md-1_5 {
+	flex-basis: 100%;
+	max-width: 100%;
+}
+
+.inline-icons.row {
+	flex-direction: row;
+	flex-wrap: wrap;
+}
+
+.inline-icons .nested-row {
+	display: flex;
+}
+
+.icon-buckets .inline-icons .icon {
+	text-align: right;
+}
+
+.icon-buckets .align-center .icon {
+	margin-left: auto;
+	margin-right: auto;
+}
+
+.align-center .col-lg-10, .align-center .col-md-10, .align-center .col-sm-10, .align-center .col-xs-10 {
+	max-width: 100%;
+	flex-basis: 100%;
+}
+
+/* BOXED COLUMN */
+.boxed-content {
+	padding: .5em 2em 1.5em 2em;
+	border: 1px solid #000;
+}
+
+body .icon {
+	padding-top: 0;
+}
+
+.gform_confirmation_message {
+	padding-top: 75px!important;
+}
+
+a:focus {
+	border: none!important;
+}
+
+/* ADD TOP AND BOTTOM PADDING TO FLEX BOX ITEMS
+.col-sm, .col-sm-1, .col-sm-10, .col-sm-11, .col-sm-12, .col-sm-2, .col-sm-3, .col-sm-4, .col-sm-5, .col-sm-6, .col-sm-7, .col-sm-8, .col-sm-9, .col-sm-offset-0, .col-sm-offset-1, .col-sm-offset-10, .col-sm-offset-11, .col-sm-offset-12, .col-sm-offset-2, .col-sm-offset-3, .col-sm-offset-4, .col-sm-offset-5, .col-sm-offset-6, .col-sm-offset-7, .col-sm-offset-8, .col-sm-offset-9 {
+	padding-bottom: .4em;
+	padding-top: .4em;
+}
+*/
+
+/* REMOVE SIDE PADDING WHEN ROW IS 800PX WIDE */
+.width-800 > .row-width-1280 {
+	padding-right: 0;
+	padding-left: 0;
+}
+
+.alignright {
+	float: right;
+	margin: 10px 0 20px 20px;
+}
+
+.alignleft {
+	float: left;
+	margin: 10px 20px 20px 0;
+}
+
+.aligncenter {
+	margin: auto;
+	display: block;
+}
+
+/* MAX WIDTH */
+
+.max-width-600 {
+	max-width: 600px;
+	margin: auto;
+}
+
+.voltage-magazine .image-container img {
+	max-height: none;
+	max-width: 100%;
+	height: 100%;
+	width: 100%;
+}
+
+.voltage-magazine .post-content-container ul.image-grid-container {
+	filter: unset;
+}
+
+.column-container h3:first-of-type {
+	margin-top: 0;
+}
+
+.clear:after {
+	display: table;
+	clear: both;
+	content: "";
+}
+
+input[type="button"], input[type="submit"], input[type="reset"], button, .button {
+	border-radius: 4px;
+}
+
+.mobile-filter button:hover {
+	background: #000;
+}
+
+.mobile-filter, .filters-button-group {
+	width: 80%;
+}
+
+body .button {
+	padding: 10px 20px;
+	font-size: 15px;
+}
+
+.classic-block-wrap, .pagination {
+	padding-bottom: 4em;
+}
+
+.post-header:before {
+	background: linear-gradient(180deg, rgba(0,0,0,.5), rgba(255,255,255,0));
+	top: 0;
+	left: 0;
+	content: "";
+	height: 100%;
+	width: 100%;
+	position: absolute;
+}
+
+.blog_card_excerpt {
+	font-size: 16px;
+	line-height: 1.75em;
+	display: block;
+}
+
+@import "_combine.scss";
+@import "_gravity-forms.scss";
+@import "_media-queries.scss";

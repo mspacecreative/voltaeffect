@@ -1,0 +1,16 @@
+.banner {
+	text-align: center;
+	padding: 4em 0;
+	position: relative;
+	background-size: cover;
+	background-position: center;
+	background-repeat: repeat;
+}
+
+.banner header > p:last-child {
+	margin-bottom: 0;
+}
+
+.banner h1 {
+	margin-bottom: 0.5em;
+}

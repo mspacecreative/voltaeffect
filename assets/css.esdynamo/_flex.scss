@@ -1,0 +1,73 @@
+.row.gutter_wide {
+	margin-left: -1rem;
+	margin-right: -1rem;
+}
+
+.row.gutter_wide > .col {
+	padding-left: 1rem;
+	padding-right: 1rem;
+}
+
+.boxed {
+	padding-bottom: 1rem;
+}
+
+.inner.boxed {
+	padding-bottom: 0;
+}
+
+.row.gutter_wide > .boxed {
+	padding-bottom: 2rem;
+}
+
+.row.gutter_wider {
+	margin-left: -2rem;
+	margin-right: -2rem;
+}
+
+.row.gutter_wider > .col {
+	padding-left: 2rem;
+	padding-right: 2rem;
+}
+
+.row.gutter_wider > .boxed {
+	padding-bottom: 4rem;
+}
+
+// BOXED ITEMS
+.boxed > div {
+	padding: 0 1em 1em;
+	height: 100%;
+	border: 1px solid #000;
+	border-top: 5px solid #000;
+	display: flex;
+    flex-direction: column;
+}
+.boxed > div .link-button {
+	margin-top: auto;
+}
+.light .boxed > div {
+	border: 1px solid #fff;
+	border-top: 5px solid #fff;
+}
+@media (min-width: 64em) {
+	.col-lg-five {
+		flex: 0 0 20%;
+		padding-right: .5rem;
+		padding-left: .5rem;
+	}
+	.boxed:nth-child(3n+1):nth-last-child(-n+3),
+  	.boxed:nth-child(3n+1):nth-last-child(-n+3) ~ .boxed {
+		padding-bottom: 0;
+	}
+	
+	.boxed:nth-child(4n+1):nth-last-child(-n+4),
+  	.boxed:nth-child(4n+1):nth-last-child(-n+4) ~ .boxed {
+		padding-bottom: 0;
+	}
+	
+	.boxed:nth-child(5n+1):nth-last-child(-n+5),
+  	.boxed:nth-child(5n+1):nth-last-child(-n+5) ~ .boxed {
+		padding-bottom: 0;
+	}
+}

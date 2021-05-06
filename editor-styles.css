@@ -1,0 +1,49 @@
+.inline-button {
+	margin-top: 15px;
+}
+
+.button.inline-button {
+	position: relative;
+	display: inline-block;
+	color: #000;
+	text-align: center;
+	text-decoration: none;
+	padding: 15px 25px;
+	border: 1px solid #000;
+	cursor: pointer;
+	outline: 0;
+	font-weight: 300;
+	-moz-transition: background-color 0.35s ease-in-out, color 0.35s ease-in-out, border-bottom-color 0.35s ease-in-out;
+	-webkit-transition: background-color 0.35s ease-in-out, color 0.35s ease-in-out, border-bottom-color 0.35s ease-in-out;
+	-ms-transition: background-color 0.35s ease-in-out, color 0.35s ease-in-out, border-bottom-color 0.35s ease-in-out;
+	transition: background-color 0.35s ease-in-out, color 0.35s ease-in-out, border-bottom-color 0.35s ease-in-out;
+}
+.dark {
+	color: #000;
+}
+.button.inline-button {
+	border-radius: 4px;
+}
+.dark.button.inline-button {
+	background-color: #000;
+	color: #fff;
+	padding: 15px 25px;
+}
+.light.button.inline-button {
+	color: #000;
+}
+.dark.button.inline-button:hover {
+	background-color: #999;
+}
+.underlined-heading {
+	position: relative;
+	display: block;
+}
+.underlined-heading:before {
+	position: absolute;
+	height: 2px;
+	width: 100%;
+	background-color: #000;
+	top: 100%;
+	content: '';
+}
