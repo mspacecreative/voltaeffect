@@ -61,7 +61,7 @@
 					<a href="<?php the_permalink(); ?>"><h3><?php the_title(); ?></h3></a>
 					<!-- /post details -->
 						
-					<span class="blog_card_excerpt"><?php echo wp_trim_words(get_the_content(), 40, '&hellip; <a class="view-article" href="' . get_permalink($post->ID) . '">' . __('read more', 'volta') . '</a>'); ?></span>
+					<span class="blog_card_excerpt"><?php echo blogExcerpt(); ?></span>
 						
 				</div>
 				

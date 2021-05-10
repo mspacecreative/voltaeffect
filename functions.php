@@ -355,6 +355,12 @@ function html5_blank_view_article($more)
 }
 */
 
+function blogExcerpt() {
+	$content = apply_filters( 'the_content', get_the_content() );
+	$excerpt = wp_trim_words($content, 20, '&hellip; <a class="view-article" href="' . get_permalink($post->ID) . '">' . __('read more', 'volta') . '</a>');
+	echo $excerpt;
+}
+
 // Remove 'text/css' from our enqueued stylesheet
 function html5_style_remove($tag)
 {
