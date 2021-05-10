@@ -65,6 +65,9 @@
 .masonry-block-content > .post-meta-container ~ a {
 	color: #000;
 }
+.masonry-block-content > .post-meta-container ~ a:hover {
+	color: #00dbb6;
+}
 /*
 .card-content-inner {
 	display: flex;
