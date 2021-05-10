@@ -23,6 +23,7 @@
 	<div class="row cards">
 		
 		<?php while ( have_posts() ) : the_post();
+		$excerpt = get_the_excerpt();
 		$featuredimg = get_the_post_thumbnail_url( get_the_ID(), 'featured-mobile' );
 		$imgalt = get_post_meta( get_post_thumbnail_id(), '_wp_attachment_image_alt', true );
 		$defaultimg = get_template_directory_uri() . '/img/placeholders/volta-blog-featured-img.jpg'; ?>
@@ -60,7 +61,7 @@
 					<a href="<?php the_permalink(); ?>"><h3><?php the_title(); ?></h3></a>
 					<!-- /post details -->
 						
-					<span class="blog_card_excerpt"><?php echo custom_field_excerpt(); ?></span>
+					<span class="blog_card_excerpt"><?php echo $excerpt ?></span>
 						
 				</div>
 				
