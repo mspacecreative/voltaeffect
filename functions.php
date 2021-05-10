@@ -336,7 +336,7 @@ function html5wp_excerpt($length_callback = '', $more_callback = '')
     $output = get_the_excerpt();
     $output = apply_filters('wptexturize', $output);
     $output = apply_filters('convert_chars', $output);
-    $output = apply_filters( 'the_excerpt', get_field( 'content_editor' ) );
+    $output = apply_filters( 'the_excerpt', get_field( 'content_editor' ), $output );
     $output = '<p>' . $output . '</p>';
     echo $output;
 }
