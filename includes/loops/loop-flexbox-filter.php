@@ -24,7 +24,7 @@
 		
 		<?php while ( have_posts() ) : the_post();
 		$featuredimg = get_post_thumbnail('logo-grid');
-		$defaultimg = get_template_directory_uri() . '/img/placeholders/volta-blog-featured-img' ?>
+		$defaultimg = get_template_directory_uri() . '/img/placeholders/volta-blog-featured-img'; ?>
 		<div class="col col-lg-4 col-md-4 col-sm-6 col-xs-6">
 			
 			<div class="col-inner">
