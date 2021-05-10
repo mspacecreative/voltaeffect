@@ -341,26 +341,13 @@ function html5wp_excerpt($length_callback = '', $more_callback = '')
     $output = '<p>' . $output . '</p>';
     echo $output;
 }
+*/
 
 function ld_custom_excerpt_length( $length ) {
     return 20;
 }
 add_filter( 'excerpt_length', 'ld_custom_excerpt_length', 999 );
-*/
-
-function custom_field_excerpt() {
-	global $post;
-	$text = get_field('content_editor'); //Replace 'your_field_name'
-	if ( '' != $text ) {
-		$text = strip_shortcodes( $text );
-		$text = apply_filters('the_content', $text);
-		$text = str_replace(']]>', ']]>', $text);
-		$excerpt_length = 20; // 20 words
-		//$excerpt_more = apply_filters('excerpt_more', ' ' . '[...]');
-		$text = wp_trim_words( $text, $excerpt_length, $excerpt_more );
-	}
-	echo apply_filters('the_excerpt', $text);
-}
+apply_filters( 'the_excerpt', get_the_content(get_field('content_editor')) );
 
 // Custom View Article link to Post
 function html5_blank_view_article($more)
