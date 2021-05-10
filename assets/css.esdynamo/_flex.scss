@@ -50,6 +50,17 @@
 	border: 1px solid #fff;
 	border-top: 5px solid #fff;
 }
+
+// CARDS
+.col-inner {
+	display: flex;
+	flex-direction: column;
+	height: 100%;
+	padding: 2em;
+}
+.card-content-inner {
+	box-shadow: 0 0 15px #d9d9d9;
+}
 @media (min-width: 64em) {
 	.col-lg-five {
 		flex: 0 0 20%;
