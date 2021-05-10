@@ -11907,6 +11907,10 @@ body .button {
 	height: 100%;
 }
 
+.masonry-block-content > .post-meta-container ~ a {
+	color: #000;
+}
+
 /*
 .card-content-inner {
 	display: flex;
