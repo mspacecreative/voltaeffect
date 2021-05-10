@@ -42,7 +42,7 @@
 					</a>
 				<?php else: ?>
 					<a href="<?php the_permalink(); ?>" title="<?php the_title(); ?>">
-						<img src="<?php echo $featuredimg ?>" alt="Volta">
+						<img src="<?php echo $defaultimg ?>" alt="Volta">
 					</a>
 				<?php endif; ?>
 				<!-- /post thumbnail -->
