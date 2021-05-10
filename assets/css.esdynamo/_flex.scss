@@ -54,13 +54,18 @@
 // CARDS
 .col-inner {
 	box-shadow: 0 0 15px #d9d9d9;
+	display: flex;
+    flex-direction: column;
+    height: 100%;
 }
+/*
 .card-content-inner {
 	display: flex;
 	flex-direction: column;
 	height: 100%;
 	padding: 2em;
 }
+*/
 @media (min-width: 64em) {
 	.col-lg-five {
 		flex: 0 0 20%;

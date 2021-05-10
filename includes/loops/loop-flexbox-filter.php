@@ -25,7 +25,7 @@
 		<?php while ( have_posts() ) : the_post();
 		$featuredimg = get_the_post_thumbnail_url( get_the_ID(), 'logo-grid' );
 		$imgalt = get_post_meta( get_post_thumbnail_id(), '_wp_attachment_image_alt', true );
-		$defaultimg = get_template_directory_uri() . '/img/placeholders/volta-blog-featured-img'; ?>
+		$defaultimg = get_template_directory_uri() . '/img/placeholders/volta-blog-featured-img.jpg'; ?>
 		<div class="col col-lg-4 col-md-4 col-sm-6 col-xs-6">
 			
 			<div class="col-inner">
@@ -47,25 +47,21 @@
 				<?php endif; ?>
 				<!-- /post thumbnail -->
 					
-				<div class="card-content-inner">
-					
-					<div class="masonry-block-content">
+				<div class="masonry-block-content">
 						
-						<!-- post details -->
-						<div class="post-meta-container">
-							<span class="date"><?php the_time('F j, Y'); ?></span>
-							<span class="author"><?php _e( 'By', 'volta' ); ?> <?php the_author_posts_link(); ?></span>
-						</div>
-						<!-- /post details -->
-						
-						<!-- post title -->
-						<a href="<?php the_permalink(); ?>"><h3><?php the_title(); ?></h3></a>
-						<!-- /post details -->
-						
-						<span class="blog_card_excerpt"><?php html5wp_excerpt('html5wp_index'); ?></span>
-						
+					<!-- post details -->
+					<div class="post-meta-container">
+						<span class="date"><?php the_time('F j, Y'); ?></span>
+						<span class="author"><?php _e( 'By', 'volta' ); ?> <?php the_author_posts_link(); ?></span>
 					</div>
-					
+					<!-- /post details -->
+						
+					<!-- post title -->
+					<a href="<?php the_permalink(); ?>"><h3><?php the_title(); ?></h3></a>
+					<!-- /post details -->
+						
+					<span class="blog_card_excerpt"><?php html5wp_excerpt('html5wp_index'); ?></span>
+						
 				</div>
 				
 			</div>
