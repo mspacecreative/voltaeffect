@@ -20,7 +20,7 @@
 
 <?php if ( have_posts() ): ?>
 <div class="row-width-1280">
-	<div class="row">
+	<div class="row cards">
 		
 		<?php while ( have_posts() ) : the_post();
 		$featuredimg = get_the_post_thumbnail_url( get_the_ID(), 'logo-grid' );
