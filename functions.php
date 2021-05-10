@@ -347,7 +347,6 @@ function ld_custom_excerpt_length( $length ) {
     return 20;
 }
 add_filter( 'excerpt_length', 'ld_custom_excerpt_length', 999 );
-apply_filters( 'the_excerpt', get_the_content(get_field('content_editor')) );
 
 // Custom View Article link to Post
 function html5_blank_view_article($more)
