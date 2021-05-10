@@ -23,7 +23,8 @@
 	<div class="row">
 		
 		<?php while ( have_posts() ) : the_post();
-		$featuredimg = get_the_post_thumbnail('logo-grid');
+		$featuredimg = get_the_post_thumbnail_url( get_the_ID(), 'logo-grid' );
+		$imgalt = get_post_meta( get_post_thumbnail_id(), '_wp_attachment_image_alt', true );
 		$defaultimg = get_template_directory_uri() . '/img/placeholders/volta-blog-featured-img'; ?>
 		<div class="col col-lg-4 col-md-4 col-sm-6 col-xs-6">
 			
@@ -37,7 +38,7 @@
 					
 				<?php elseif ( $featuredimg ) : ?>
 					<a href="<?php the_permalink(); ?>" title="<?php the_title(); ?>">
-						<?php echo $featuredimg ?>
+						<img src="<?php echo $featuredimg ?>" alt="<?php if ( $imgalt ): echo $imgalt; else: echo bloginfo('name'); endif; ?>">
 					</a>
 				<?php else: ?>
 					<a href="<?php the_permalink(); ?>" title="<?php the_title(); ?>">
