@@ -105,7 +105,7 @@ elseif ( $layouttype == 'one' && $verticalalignment == 'bottom' ):
 			<?php if ( get_field('heading') ): ?>
 				<h2 class="width-100"><?php the_field('heading'); ?></h2>
 			<?php endif; ?>
-			<div class="row gutter_wider extra-top-bottom-padding align_items_bottom">
+			<div class="row gutter_wider align_items_bottom">
 				<?php while( have_rows('variable_columns') ): the_row(); ?>
 				
 				<div class="col one_column">
@@ -126,7 +126,7 @@ elseif ( $layouttype == 'two' && $verticalalignment == 'top' && $bgcolour ):
 	
 	<section class="columns-container<?php if ( $spacing ): echo ' '; echo $spacing; endif; ?>" style="background-color: <?php the_field('column_background_colour'); ?>;">
 		
-		<div class="row-width-1280 extra-top-bottom-padding top-margin">
+		<div class="row-width-1280">
 			<?php if ( get_field('heading') ): ?>
 				<h2 class="width-100"><?php the_field('heading'); ?></h2>
 			<?php endif; ?>
@@ -342,7 +342,7 @@ elseif ( $layouttype == 'two' && $verticalalignment == 'center' && $bgcolour ):
 			<?php if ( get_field('heading') ): ?>
 				<h2 class="width-100"><?php the_field('heading'); ?></h2>
 			<?php endif; ?>
-			<div class="row gutter_wider display-flex extra-top-bottom-padding top-margin middle-lg middle-md">
+			<div class="row gutter_wider display-flex middle-lg middle-md">
 			
 				<?php while( have_rows('two_column_layout') ): the_row(); ?>
 				
@@ -552,7 +552,7 @@ elseif ( $layouttype == 'two' && $verticalalignment == 'bottom' && $bgcolour ):
 	<section class="columns-container<?php if ( $spacing ): echo ' '; echo $spacing; endif; ?>" style="background-color: <?php the_field('column_background_colour'); ?>;">
 		
 		<div class="row-width-1280">
-			<div class="row gutter_wider extra-top-bottom-padding top-margin align_items_bottom">
+			<div class="row gutter_wider align_items_bottom">
 				<?php if ( get_field('heading') ): ?>
 					<h2 class="width-100"><?php the_field('heading'); ?></h2>
 				<?php endif; ?>
