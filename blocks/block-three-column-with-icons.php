@@ -1,12 +1,29 @@
-<article class="icon-buckets">
+<section class="icon-buckets">
 	
-	<div class="shadow white-bg top-bottom-padding">
+	<?php 
+	$aligncenter = get_field('align_center');
+	$iconposition = get_field('icon_position');
+	$verticalspacing = get_field('vertical_spacing');
+	
+	switch ( $verticalspacing ) {
+		case 'top':
+			$spacing = 'top-padding';
+			break;
+		case 'bottom':
+			$spacing = 'bottom-padding';
+			break;
+		case 'both':
+			$spacing = 'top-bottom-padding';
+			break;
+		default:
+			$spacing = '';
+	} ?>
+	
+	<div class="shadow white-bg<?php if ( $spacing ): echo ' '; echo $spacing; endif; ?>">
 		<div class="row-width-1280">
 			<div class="row gutter_space_1 clear">
 			
-				<?php 
-				$aligncenter = get_field('align_center');
-				$iconposition = get_field('icon_position');
+				<?php
 				
 				if( have_rows('left_column') ): ?>
 				<?php while( have_rows('left_column') ): the_row();
@@ -180,4 +197,4 @@
 		
 	</div>
 	
-</article>
+</section>
