@@ -5,6 +5,7 @@ $images = get_field('image_grid');
 $verticalspacing = get_field('vertical_spacing');
 $content = get_field('content');
 $logos = get_field('logo_images');
+$greyscale = get_field('greyscale');
 
 switch ( $verticalspacing ) {
 	case 'top':
@@ -49,9 +50,9 @@ switch ( $imagerowcount ) {
 		if ( $images ):
 		
 		if ( $logos ): ?>
-		<ul class="row middle-lg middle-md middle-sm center-lg center-md center-sm center-xs logo-size">
+		<ul class="row middle-lg middle-md middle-sm center-lg center-md center-sm center-xs logo-size<?php if ( $greyscale ): echo ' greyscale-img'; endif; ?>">
 		<?php else : ?>
-		<ul class="row middle-lg middle-md middle-sm center-lg center-md center-sm center-xs">
+		<ul class="row middle-lg middle-md middle-sm center-lg center-md center-sm center-xs<?php if ( $greyscale ): echo ' greyscale-img'; endif; ?>">
 		<?php endif; ?>
 				
 			<?php foreach( $images as $image ):

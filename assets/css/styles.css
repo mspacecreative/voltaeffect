@@ -12081,8 +12081,11 @@ p > .inline-button:last-of-type {
 
 .image-grid-container ul {
 	list-style: none;
-	filter: grayscale(1);
 	padding: 0;
+}
+
+.greyscale-img ul {
+	filter: grayscale(1);
 }
 
 .post-content-container .image-grid-container ul li::before {
