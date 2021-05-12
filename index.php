@@ -52,23 +52,23 @@
 		
 		<div class="clear row">
 			<main role="main">
-			<!-- section -->
-			<section>
-	
-				<?php 
-				$layout = get_field('grid_layout', 'options');
-				if ( $layout == 'masonry' ):
-				get_template_part('includes/loops/loop-masonry-filter');
-				elseif ( $layout == 'flexbox' ):
-				get_template_part('includes/loops/loop-flexbox-filter');
-				else :
-				get_template_part('includes/loops/loop-masonry-filter');
-				endif;
-				get_template_part('pagination'); ?>
-	
-			</section>
-			<!-- /section -->
-		</main>
+				<!-- section -->
+				<section>
+		
+					<?php 
+					$layout = get_field('grid_layout', 'options');
+					if ( $layout == 'masonry' ):
+					get_template_part('includes/loops/loop-masonry-filter');
+					elseif ( $layout == 'flexbox' ):
+					get_template_part('includes/loops/loop-flexbox-filter');
+					else :
+					get_template_part('includes/loops/loop-masonry-filter');
+					endif;
+					get_template_part('pagination'); ?>
+		
+				</section>
+				<!-- /section -->
+			</main>
 		</div>
 
 	</div>
