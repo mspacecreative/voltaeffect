@@ -12084,7 +12084,7 @@ p > .inline-button:last-of-type {
 	padding: 0;
 }
 
-.greyscale-img ul {
+.greyscale-img {
 	filter: grayscale(1);
 }
 
