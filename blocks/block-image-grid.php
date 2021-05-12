@@ -42,7 +42,7 @@ switch ( $imagerowcount ) {
 } ?>
 
 <section class="image-grid-container<?php if ( $spacing ): echo ' '; echo $spacing; endif; ?>">
-	<div class="row-width-1280">
+	<div class="row-width-1280<?php if ( $narrowcolumn ): echo ' '; echo $narrowcolumn; endif; ?>">
 		<?php 
 		if ( $content ) {
 		echo $content;
