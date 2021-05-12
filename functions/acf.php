@@ -183,7 +183,7 @@ function my_acf_init() {
 		// register column block
 		acf_register_block(array(
 			'name'				=> 'columns-new',
-			'title'				=> __('Variable Columns Section'),
+			'title'				=> __('Variable Columns Block'),
 			'description'		=> __('Displays variable column layout'),
 			'render_callback'	=> 'my_acf_block_render_callback',
 			'category'			=> 'formatting',
