@@ -3,12 +3,27 @@ $layouttype = get_field('layout_type');
 $verticalalignment = get_field('vertical_alignment');
 $bgcolour = get_field('column_background_colour');
 $hideblock = get_field('hide_block_hide_block');
+$verticalspacing = get_field('vertical_spacing');
+
+switch ( $verticalspacing ) {
+	case 'top':
+		$spacing = 'top-padding';
+		break;
+	case 'bottom':
+		$spacing = 'bottom-padding';
+		break;
+	case 'both':
+		$spacing = 'top-bottom-padding';
+		break;
+	default:
+		$spacing = '';
+}
 
 if ( $layouttype == 'one' && $verticalalignment == 'top' ):	
 	
 	if( have_rows('variable_columns') ): ?>
 	
-	<div class="columns-container">
+	<section class="columns-container<?php if ( $spacing ): echo ' '; echo $spacing; endif; ?>">
 		
 		<div class="row-width-1280">
 			<?php if ( get_field('heading') ): ?>
@@ -26,7 +41,7 @@ if ( $layouttype == 'one' && $verticalalignment == 'top' ):
 			</div>
 		</div>
 		
-	</div>
+	</section>
 	
 	<?php endif;
 	
@@ -34,7 +49,7 @@ elseif ( $layouttype == 'one' && $verticalalignment == 'center' && $bgcolour ):
 
 	if( have_rows('variable_columns') ): ?>
 	
-	<div class="columns-container">
+	<section class="columns-container<?php if ( $spacing ): echo ' '; echo $spacing; endif; ?>">
 		
 		<div class="row-width-1280">
 			<?php if ( get_field('heading') ): ?>
@@ -51,7 +66,7 @@ elseif ( $layouttype == 'one' && $verticalalignment == 'center' && $bgcolour ):
 			</div>
 		</div>
 		
-	</div>
+	</section>
 	
 	<?php endif;
 	
@@ -59,7 +74,7 @@ elseif ( $layouttype == 'one' && $verticalalignment == 'center' ):
 
 	if( have_rows('variable_columns') ): ?>
 	
-	<div class="columns-container">
+	<section class="columns-container<?php if ( $spacing ): echo ' '; echo $spacing; endif; ?>">
 		
 		<div class="row-width-1280">
 			<?php if ( get_field('heading') ): ?>
@@ -76,7 +91,7 @@ elseif ( $layouttype == 'one' && $verticalalignment == 'center' ):
 			</div>
 		</div>
 		
-	</div>
+	</section>
 	
 	<?php endif;
 	
@@ -84,7 +99,7 @@ elseif ( $layouttype == 'one' && $verticalalignment == 'bottom' ):
 
 	if( have_rows('variable_columns') ): ?>
 	
-	<div class="columns-container">
+	<section class="columns-container<?php if ( $spacing ): echo ' '; echo $spacing; endif; ?>">
 		
 		<div class="row-width-1280">
 			<?php if ( get_field('heading') ): ?>
@@ -101,7 +116,7 @@ elseif ( $layouttype == 'one' && $verticalalignment == 'bottom' ):
 			</div>
 		</div>
 		
-	</div>
+	</section>
 	
 	<?php endif;
 	
@@ -109,7 +124,7 @@ elseif ( $layouttype == 'two' && $verticalalignment == 'top' && $bgcolour ):
 
 	if( have_rows('two_column_layout') ): ?>
 	
-	<div class="columns-container" style="background-color: <?php the_field('column_background_colour'); ?>;">
+	<section class="columns-container<?php if ( $spacing ): echo ' '; echo $spacing; endif; ?>" style="background-color: <?php the_field('column_background_colour'); ?>;">
 		
 		<div class="row-width-1280 extra-top-bottom-padding top-margin">
 			<?php if ( get_field('heading') ): ?>
@@ -172,7 +187,7 @@ elseif ( $layouttype == 'two' && $verticalalignment == 'top' && $bgcolour ):
 			</div>
 		</div>
 		
-	</div>
+	</section>
 	
 	<?php endif;
 	
@@ -180,7 +195,7 @@ elseif ( $layouttype == 'two' && $verticalalignment == 'top' ):
 
 	if( have_rows('two_column_layout') ): ?>
 	
-	<div class="columns-container">
+	<section class="columns-container<?php if ( $spacing ): echo ' '; echo $spacing; endif; ?>">
 		
 		<div class="row-width-1280 top-bottom-margin">
 			<?php if ( get_field('heading') ): ?>
@@ -245,7 +260,7 @@ elseif ( $layouttype == 'two' && $verticalalignment == 'top' ):
 			</div>
 		</div>
 		
-	</div>
+	</section>
 	
 <?php endif;
 	
@@ -254,7 +269,7 @@ elseif ( $layouttype == 'two' && $verticalalignment == 'center' && $bgcolour ):
 	if( have_rows('two_column_layout') ): ?>
 	
 	<?php if ( $hideblock ) : ?>
-	<div class="columns-container" style="background-color: <?php the_field('column_background_colour'); ?>; display: none;">
+	<section class="columns-container<?php if ( $spacing ): echo ' '; echo $spacing; endif; ?>" style="background-color: <?php the_field('column_background_colour'); ?>; display: none;">
 		
 		<div class="row-width-1280 extra-top-bottom-padding top-bottom-margin">
 			<?php if ( get_field('heading') ): ?>
@@ -319,9 +334,9 @@ elseif ( $layouttype == 'two' && $verticalalignment == 'center' && $bgcolour ):
 			</div>
 		</div>
 		
-	</div>
+	</section>
 	<?php else : ?>
-	<div class="columns-container" style="background-color: <?php the_field('column_background_colour'); ?>;">
+	<section class="columns-container<?php if ( $spacing ): echo ' '; echo $spacing; endif; ?>" style="background-color: <?php the_field('column_background_colour'); ?>;">
 		
 		<div class="row-width-1280">
 			<?php if ( get_field('heading') ): ?>
@@ -386,7 +401,7 @@ elseif ( $layouttype == 'two' && $verticalalignment == 'center' && $bgcolour ):
 			</div>
 		</div>
 		
-	</div>
+	</section>
 	<?php endif;
 	
 	endif;
@@ -396,7 +411,7 @@ elseif ( $layouttype == 'two' && $verticalalignment == 'center' ):
 	if( have_rows('two_column_layout') ): ?>
 	
 	<?php if ( $hideblock ) : ?>
-	<div class="columns-container" style="display: none;">
+	<section class="columns-container<?php if ( $spacing ): echo ' '; echo $spacing; endif; ?>" style="display: none;">
 		
 		<div class="row-width-1280">
 			<?php if ( get_field('heading') ): ?>
@@ -459,9 +474,9 @@ elseif ( $layouttype == 'two' && $verticalalignment == 'center' ):
 			</div>
 		</div>
 		
-	</div>
+	</section>
 	<?php else : ?>
-	<div class="columns-container">
+	<section class="columns-container<?php if ( $spacing ): echo ' '; echo $spacing; endif; ?>">
 		
 		<div class="row-width-1280">
 			<div class="row gutter_wider top-bottom-padding top-bottom-margin middle-lg middle-md">
@@ -525,7 +540,7 @@ elseif ( $layouttype == 'two' && $verticalalignment == 'center' ):
 			</div>
 		</div>
 		
-	</div>
+	</section>
 	<?php endif;
 	
 	endif;
@@ -534,7 +549,7 @@ elseif ( $layouttype == 'two' && $verticalalignment == 'bottom' && $bgcolour ):
 
 	if( have_rows('two_column_layout') ): ?>
 	
-	<div class="columns-container" style="background-color: <?php the_field('column_background_colour'); ?>;">
+	<section class="columns-container<?php if ( $spacing ): echo ' '; echo $spacing; endif; ?>" style="background-color: <?php the_field('column_background_colour'); ?>;">
 		
 		<div class="row-width-1280">
 			<div class="row gutter_wider extra-top-bottom-padding top-margin align_items_bottom">
@@ -598,7 +613,7 @@ elseif ( $layouttype == 'two' && $verticalalignment == 'bottom' && $bgcolour ):
 			</div>
 		</div>
 		
-	</div>
+	</section>
 	
 	<?php endif;
 	
@@ -606,7 +621,7 @@ elseif ( $layouttype == 'two' && $verticalalignment == 'bottom' ):
 
 	if( have_rows('two_column_layout') ): ?>
 	
-	<div class="columns-container">
+	<section class="columns-container<?php if ( $spacing ): echo ' '; echo $spacing; endif; ?>">
 		
 		<div class="row-width-1280">
 			<div class="row gutter_wider top-bottom-padding top-bottom-margin align_items_bottom">
@@ -670,7 +685,7 @@ elseif ( $layouttype == 'two' && $verticalalignment == 'bottom' ):
 			</div>
 		</div>
 		
-	</div>
+	</section>
 	
 	<?php endif;
 	
@@ -678,7 +693,7 @@ elseif ( $layouttype == 'three' && $verticalalignment == 'top' ):
 
 	if( have_rows('three_column_layout') ): ?>
 	
-	<div class="columns-container">
+	<section class="columns-container<?php if ( $spacing ): echo ' '; echo $spacing; endif; ?>">
 		
 		<div class="row-width-1280">
 			<div class="row gutter_wider top-bottom-padding top-bottom-margin">
@@ -767,7 +782,7 @@ elseif ( $layouttype == 'three' && $verticalalignment == 'top' ):
 			</div>
 		</div>
 		
-	</div>
+	</section>
 	
 	<?php endif;
 	
@@ -775,7 +790,7 @@ elseif ( $layouttype == 'three' && $verticalalignment == 'center' ):
 
 	if( have_rows('three_column_layout') ): ?>
 	
-	<div class="columns-container">
+	<section class="columns-container<?php if ( $spacing ): echo ' '; echo $spacing; endif; ?>">
 		
 		<div class="row-width-1280">
 			<div class="row gutter_wider top-bottom-padding top-bottom-margin middle-lg middle-md">
@@ -864,7 +879,7 @@ elseif ( $layouttype == 'three' && $verticalalignment == 'center' ):
 			</div>
 		</div>
 		
-	</div>
+	</section>
 	
 	<?php endif;
 	
@@ -872,7 +887,7 @@ elseif ( $layouttype == 'three' && $verticalalignment == 'bottom' ):
 
 	if( have_rows('three_column_layout') ): ?>
 	
-	<div class="columns-container">
+	<section class="columns-container<?php if ( $spacing ): echo ' '; echo $spacing; endif; ?>">
 		
 		<div class="row-width-1280">
 			<div class="row gutter_wider top-bottom-padding top-bottom-margin align_items_bottom">
@@ -961,7 +976,7 @@ elseif ( $layouttype == 'three' && $verticalalignment == 'bottom' ):
 			</div>
 		</div>
 		
-	</div>
+	</section>
 	
 	<?php endif;
 	
@@ -969,7 +984,7 @@ elseif ( $layouttype == 'four' && $verticalalignment == 'top' ):
 
 	if( have_rows('four_column_layout') ): ?>
 	
-	<div class="columns-container">
+	<section class="columns-container<?php if ( $spacing ): echo ' '; echo $spacing; endif; ?>">
 		
 		<div class="row-width-1280">
 			<div class="row gutter_wider top-bottom-padding top-bottom-margin">
@@ -1083,7 +1098,7 @@ elseif ( $layouttype == 'four' && $verticalalignment == 'top' ):
 			</div>
 		</div>
 		
-	</div>
+	</section>
 	
 	<?php endif;
 	
@@ -1091,7 +1106,7 @@ elseif ( $layouttype == 'four' && $verticalalignment == 'center' ):
 
 	if( have_rows('four_column_layout') ): ?>
 	
-	<div class="columns-container">
+	<section class="columns-container<?php if ( $spacing ): echo ' '; echo $spacing; endif; ?>">
 		
 		<div class="row-width-1280">
 			<div class="row gutter_wider top-bottom-padding top-bottom-margin middle-lg middle-md">
@@ -1205,7 +1220,7 @@ elseif ( $layouttype == 'four' && $verticalalignment == 'center' ):
 			</div>
 		</div>
 		
-	</div>
+	</section>
 	
 	<?php endif;
 	
@@ -1213,7 +1228,7 @@ elseif ( $layouttype == 'four' && $verticalalignment == 'bottom' ):
 
 	if( have_rows('four_column_layout') ): ?>
 	
-	<div class="columns-container">
+	<section class="columns-container<?php if ( $spacing ): echo ' '; echo $spacing; endif; ?>">
 		
 		<div class="row-width-1280">
 			<div class="row gutter_wider top-bottom-padding top-bottom-margin align_items_bottom">
@@ -1327,7 +1342,7 @@ elseif ( $layouttype == 'four' && $verticalalignment == 'bottom' ):
 			</div>
 		</div>
 		
-	</div>
+	</section>
 	
 	<?php endif;
 	
