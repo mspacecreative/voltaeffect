@@ -1087,6 +1087,12 @@ p > .inline-button:last-of-type {
 	text-align: right;
 }
 
+.wp-caption-text {
+	font-size: 14px;
+	line-height: 1.5em;
+	margin-top: 1em;
+}
+
 .light, .light h1, .light h2, .light h3, .light h4, .light h5, .light h6, .light ul {
 	color: #fff;
 }
